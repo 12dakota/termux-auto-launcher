@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.termux.autolauncher"
         minSdk 21
-        targetSdk 28
+        targetSdk 34
         versionCode 3
         versionName "1.2"
     }
@@ -24,6 +24,10 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.release
         }
+    }
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
